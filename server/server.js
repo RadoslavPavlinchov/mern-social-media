@@ -1,18 +1,15 @@
-import express from 'express';
 import path from 'path';
+import express from 'express';
 import { MongoClient } from 'mongodb';
 import template from './../template';
-
 //  Comment out!!! Should be used only for development only, because the React code will compile and bundle in dist.
 import devBundle from './devBundle';
 
 const app = express();
-
 //  Comment out!!! Should be used only for development only, because the React code will compile and bundle in dist
 devBundle.compile(app);
 
 const CURRENT_WORKING_DIR = process.cwd();
-
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
 
 app.get('/', (req, res) => {
