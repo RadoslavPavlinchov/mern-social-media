@@ -3,11 +3,10 @@ export default () => {
       <html lang="en">
         <head>
           <meta charset="utf-8">
-          <title>MERN Social Media Application</title>
+          <title>MERN Social Media</title>
         </head>
         <body>
-          <div id="root"></div>
-          <script type="text/javascript" src="/dist/bundle.js"> 
+          <div id="root">Hello World! Hope you are doing well</div>
        </script>
         </body>
       </html>`
